@@ -15,9 +15,9 @@
 #include <avr/interrupt.h>
 #include <string.h>
 #include <stdlib.h>
-#include "uart.h"
-#include "radio.h"
-#include "stations.h"
+#include "uart/uart.h"
+#include "nRF/radio.h"
+#include "nRF/stations.h"
 
 
 #define	BTN_DDR			DDRC
