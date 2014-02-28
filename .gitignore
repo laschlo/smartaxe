@@ -41,10 +41,6 @@ local.properties
 *.user
 *.sln.docstates
 
-#Atmel Studio
-*.atsln
-*.atsuo
-
 # Build results
 
 [Dd]ebug/
