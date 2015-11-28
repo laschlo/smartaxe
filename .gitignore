@@ -213,3 +213,24 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+##########################
+## Atmel Studio
+##########################
+Output*.txt
+__vm/
+.vs/
+*.atsuo
+Debug/
+Visual Micro/
+*.old
+*.d
+*.eep
+*.elf
+*.hex
+*.lss
+*.map
+*.o
+*.srec
+*.mk
+*.S
