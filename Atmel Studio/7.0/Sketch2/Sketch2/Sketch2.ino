@@ -2,7 +2,9 @@
  * Sketch2.ino
  *
  * Created: 10/20/2015 6:08:31 PM
- * Author: SG0891784
+ *Zmieniona linia
+ * Author: Cichocki
+ * I ta tez zmieniona linia
  */ 
 
 #define PUMP_OFF		1
