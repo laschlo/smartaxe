@@ -16,7 +16,7 @@ Uses library from https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads 
 #define PUMP_CO_PIN		6
 
 #define TEMP_FIRE_MIN	45
-#define TEMP_FIRE_MAX	68
+#define TEMP_FIRE_MAX	69
 #define TEMP_WATER_MAX	50
 
 #define PCO_DELAY		60*1000
