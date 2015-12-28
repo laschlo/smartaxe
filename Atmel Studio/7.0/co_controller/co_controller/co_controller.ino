@@ -19,8 +19,10 @@ Uses library from https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads 
 #define TEMP_FIRE_MAX	69
 #define TEMP_WATER_MAX	50
 
-#define PCO_DELAY		(6*60*1000)UL
-#define PCO_WORK_TIME	(2*60*1000)UL
+#define	ONE_SECOND	1000
+#define ONE_MINUTE	(60*ONE_SECOND)
+#define PCO_DELAY	(6*ONE_MINUTE)
+#define PCO_WORK_TIME	(2*ONE_MINUTE)
 
 
 #define DEBUG
