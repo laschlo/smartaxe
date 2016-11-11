@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>{bca2d91f-1767-455c-8e40-d55538178723}</ProjectGuid>
+    <avrdevice>atmega328p</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Sketch1</AssemblyName>
+    <Name>Sketch1</Name>
+    <RootNamespace>Sketch1</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue>
+    </OverrideVtorValue>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <CacheFlash>true</CacheFlash>
+    <UncachedRange />
+    <BootSegment>0</BootSegment>
+    <preserveEEPROM>true</preserveEEPROM>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.21.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
+      <Value>ARDUINO=164</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr//avr/include/avr/</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/MySensors/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/MySensors</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO</Value>
+      <Value>../../Sketch1</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/variants/standard</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
+      <Value>ARDUINO=164</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr//avr/include/avr/</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/MySensors/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/MySensors</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO</Value>
+      <Value>../../Sketch1</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/variants/standard</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+    <VMSETTING_IncludePaths>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/cores/arduino;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/variants/yun;../../Sketch1;C:/Users/sg0891784/Documents/arduino-1.6.4/libraries;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/sg0891784/Documents/Arduino/libraries;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/avr/include/;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr//avr/include/avr/;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/variants/standard;C:/Users/sg0891784/Documents/Arduino/libraries/rc-switch-master;C:/Users/sg0891784/Documents/Arduino/libraries/rc-switch-master/utility;C:/Users/sg0891784/Documents/Arduino/libraries/InterruptChain;C:/Users/sg0891784/Documents/Arduino/libraries/InterruptChain/utility;C:/Users/sg0891784/Documents/Arduino/libraries/NewRemoteSwitch;C:/Users/sg0891784/Documents/Arduino/libraries/NewRemoteSwitch/utility;C:/Users/sg0891784/Documents/Arduino/libraries/RemoteSensor;C:/Users/sg0891784/Documents/Arduino/libraries/RemoteSensor/utility;C:/Users/sg0891784/Documents/Arduino/libraries/RemoteSwitch;C:/Users/sg0891784/Documents/Arduino/libraries/RemoteSwitch/utility;C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src;C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src/utility;C:/Users/sg0891784/Documents/Arduino/libraries/MySensors;C:/Users/sg0891784/Documents/Arduino/libraries/MySensors/utility;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI/utility;C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient;C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient/utility;C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO;C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO/utility;</VMSETTING_IncludePaths>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>uno</arduino.board.name>
+        <arduino.board.desc>Arduino Uno</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Uno
+vid.0=0x2341
+pid.0=0x0043
+vid.1=0x2341
+pid.1=0x0001
+vid.2=0x2A03
+pid.2=0x0043
+upload.tool=avrdude
+upload.protocol=arduino
+upload.maximum_size=32256
+upload.maximum_data_size=2048
+upload.speed=115200
+bootloader.tool=avrdude
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xDE
+bootloader.extended_fuses=0x05
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x0F
+bootloader.file=optiboot/optiboot_atmega328.hex
+build.mcu=atmega328p
+build.f_cpu=16000000L
+build.board=AVR_UNO
+build.core=arduino
+build.variant=standard
+runtime.ide.path=C:\Users\sg0891784\Documents\arduino-1.6.4
+build.system.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\arduino\avr\system
+runtime.ide.version=164
+target_package=arduino
+target_platform=avr
+runtime.hardware.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\arduino
+originalid=uno
+intellisense.tools.path={runtime.tools.avr-gcc.path}/
+intellisense.include.paths={intellisense.tools.path}avr/include/;{intellisense.tools.path}/avr/include/avr/;{intellisense.tools.path}lib\gcc\avr\4.8.1\include
+tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
+tools.atprogram.cmd.setwinpath=true
+tools.atprogram.program.params.verbose=-v
+tools.atprogram.program.params.quiet=-q
+tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+version=1.6.7
+compiler.warning_flags=-w
+compiler.warning_flags.none=-w
+compiler.warning_flags.default=
+compiler.warning_flags.more=-Wall
+compiler.warning_flags.all=-Wall -Wextra
+compiler.path={runtime.tools.avr-gcc.path}/bin/
+compiler.c.cmd=avr-gcc
+compiler.c.flags=-c -g -Os {compiler.warning_flags} -ffunction-sections -fdata-sections -MMD
+compiler.c.elf.flags={compiler.warning_flags} -Os -Wl,--gc-sections
+compiler.c.elf.cmd=avr-gcc
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=avr-g++
+compiler.cpp.flags=-c -g -Os {compiler.warning_flags} -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD
+compiler.ar.cmd=avr-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=avr-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O ihex -R .eeprom
+compiler.elf2hex.cmd=avr-objcopy
+compiler.ldflags=
+compiler.size.cmd=avr-size
+build.extra_flags=
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.S.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.objcopy.eep.extra_flags=
+compiler.elf2hex.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm
+recipe.objcopy.eep.pattern="{compiler.path}{compiler.objcopy.cmd}" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.eep"
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
+recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
+tools.avrdude.path={runtime.tools.avrdude.path}
+tools.avrdude.cmd.path={path}/bin/avrdude
+tools.avrdude.config.path={path}/etc/avrdude.conf
+tools.avrdude.upload.params.verbose=-v
+tools.avrdude.upload.params.quiet=-q -q
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.program.params.verbose=-v
+tools.avrdude.program.params.quiet=-q -q
+tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.erase.params.verbose=-v
+tools.avrdude.erase.params.quiet=-q -q
+tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m
+tools.avrdude.bootloader.params.verbose=-v
+tools.avrdude.bootloader.params.quiet=-q -q
+tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
+build.usb_manufacturer="Unknown"
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+runtime.tools.avrdude.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\tools\avr
+runtime.tools.avrdude-6.0.1-arduino5.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\tools\avr
+runtime.tools.avr-gcc.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\tools\avr
+runtime.tools.avr-gcc-4.8.1-arduino5.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\tools\avr
+ide.hint=Arduino 1.6.x ide with support for downloaded Board Manager custom tools and hardware
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.default.version=160
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+ide.help.reference.path=reference\arduino.cc\en\Reference
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.location.contributions=%VM_APPDATA_ROAMING%\arduino15
+ide.contributions.boards.allow=true
+ide.contributions.libraries.allow=true
+ide.appid=arduino16x
+location.sketchbook=C:\Users\sg0891784\Documents\Arduino
+vm.core.include=arduino.h
+vm.boardsource.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\arduino\avr
+runtime.platform.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\arduino\avr
+vm.platformname.name=avr
+build.arch=AVR
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega328p</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>arduino</arduino.upload.protocol>
+        <arduino.upload.speed>115200</arduino.upload.speed>
+        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
+        <arduino.upload.port>COM5</arduino.upload.port>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
+      <Value>ARDUINO=164</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr//avr/include/avr/</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/MySensors/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/MySensors</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO</Value>
+      <Value>../../Sketch1</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/variants/standard</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
+      <Value>ARDUINO=164</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/lib/gcc/avr/4.8.1/include</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr//avr/include/avr/</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/MySensors/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/MySensors</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO/utility</Value>
+      <Value>C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO</Value>
+      <Value>../../Sketch1</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/variants/standard</Value>
+      <Value>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/cores/arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+    <VMSETTING_IncludePaths>C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/cores/arduino;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/variants/yun;../../Sketch1;C:/Users/sg0891784/Documents/arduino-1.6.4/libraries;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/sg0891784/Documents/Arduino/libraries;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/avr/include/;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr//avr/include/avr/;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/variants/standard;C:/Users/sg0891784/Documents/Arduino/libraries/rc-switch-master;C:/Users/sg0891784/Documents/Arduino/libraries/rc-switch-master/utility;C:/Users/sg0891784/Documents/Arduino/libraries/InterruptChain;C:/Users/sg0891784/Documents/Arduino/libraries/InterruptChain/utility;C:/Users/sg0891784/Documents/Arduino/libraries/NewRemoteSwitch;C:/Users/sg0891784/Documents/Arduino/libraries/NewRemoteSwitch/utility;C:/Users/sg0891784/Documents/Arduino/libraries/RemoteSensor;C:/Users/sg0891784/Documents/Arduino/libraries/RemoteSensor/utility;C:/Users/sg0891784/Documents/Arduino/libraries/RemoteSwitch;C:/Users/sg0891784/Documents/Arduino/libraries/RemoteSwitch/utility;C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src;C:/Users/sg0891784/Documents/arduino-1.6.4/libraries/Ethernet/src/utility;C:/Users/sg0891784/Documents/Arduino/libraries/MySensors;C:/Users/sg0891784/Documents/Arduino/libraries/MySensors/utility;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI;C:/Users/sg0891784/Documents/arduino-1.6.4/hardware/arduino/avr/libraries/SPI/utility;C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient;C:/Users/sg0891784/Documents/Arduino/libraries/PubSubClient/utility;C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO;C:/Users/sg0891784/Documents/Arduino/libraries/DigitalIO/utility;</VMSETTING_IncludePaths>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>uno</arduino.board.name>
+        <arduino.board.desc>Arduino Uno</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Uno
+vid.0=0x2341
+pid.0=0x0043
+vid.1=0x2341
+pid.1=0x0001
+vid.2=0x2A03
+pid.2=0x0043
+upload.tool=avrdude
+upload.protocol=arduino
+upload.maximum_size=32256
+upload.maximum_data_size=2048
+upload.speed=115200
+bootloader.tool=avrdude
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xDE
+bootloader.extended_fuses=0x05
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x0F
+bootloader.file=optiboot/optiboot_atmega328.hex
+build.mcu=atmega328p
+build.f_cpu=16000000L
+build.board=AVR_UNO
+build.core=arduino
+build.variant=standard
+runtime.ide.path=C:\Users\sg0891784\Documents\arduino-1.6.4
+build.system.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\arduino\avr\system
+runtime.ide.version=164
+target_package=arduino
+target_platform=avr
+runtime.hardware.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\arduino
+originalid=uno
+intellisense.tools.path={runtime.tools.avr-gcc.path}/
+intellisense.include.paths={intellisense.tools.path}avr/include/;{intellisense.tools.path}/avr/include/avr/;{intellisense.tools.path}lib\gcc\avr\4.8.1\include
+tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
+tools.atprogram.cmd.setwinpath=true
+tools.atprogram.program.params.verbose=-v
+tools.atprogram.program.params.quiet=-q
+tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+version=1.6.7
+compiler.warning_flags=-w
+compiler.warning_flags.none=-w
+compiler.warning_flags.default=
+compiler.warning_flags.more=-Wall
+compiler.warning_flags.all=-Wall -Wextra
+compiler.path={runtime.tools.avr-gcc.path}/bin/
+compiler.c.cmd=avr-gcc
+compiler.c.flags=-c -g -Os {compiler.warning_flags} -ffunction-sections -fdata-sections -MMD
+compiler.c.elf.flags={compiler.warning_flags} -Os -Wl,--gc-sections
+compiler.c.elf.cmd=avr-gcc
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=avr-g++
+compiler.cpp.flags=-c -g -Os {compiler.warning_flags} -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD
+compiler.ar.cmd=avr-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=avr-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O ihex -R .eeprom
+compiler.elf2hex.cmd=avr-objcopy
+compiler.ldflags=
+compiler.size.cmd=avr-size
+build.extra_flags=
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.S.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.objcopy.eep.extra_flags=
+compiler.elf2hex.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm
+recipe.objcopy.eep.pattern="{compiler.path}{compiler.objcopy.cmd}" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.eep"
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
+recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
+tools.avrdude.path={runtime.tools.avrdude.path}
+tools.avrdude.cmd.path={path}/bin/avrdude
+tools.avrdude.config.path={path}/etc/avrdude.conf
+tools.avrdude.upload.params.verbose=-v
+tools.avrdude.upload.params.quiet=-q -q
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.program.params.verbose=-v
+tools.avrdude.program.params.quiet=-q -q
+tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.erase.params.verbose=-v
+tools.avrdude.erase.params.quiet=-q -q
+tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m
+tools.avrdude.bootloader.params.verbose=-v
+tools.avrdude.bootloader.params.quiet=-q -q
+tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
+build.usb_manufacturer="Unknown"
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+runtime.tools.avrdude.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\tools\avr
+runtime.tools.avrdude-6.0.1-arduino5.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\tools\avr
+runtime.tools.avr-gcc.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\tools\avr
+runtime.tools.avr-gcc-4.8.1-arduino5.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\tools\avr
+ide.hint=Arduino 1.6.x ide with support for downloaded Board Manager custom tools and hardware
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.default.version=160
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+ide.help.reference.path=reference\arduino.cc\en\Reference
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.location.contributions=%VM_APPDATA_ROAMING%\arduino15
+ide.contributions.boards.allow=true
+ide.contributions.libraries.allow=true
+ide.appid=arduino16x
+location.sketchbook=C:\Users\sg0891784\Documents\Arduino
+vm.core.include=arduino.h
+vm.boardsource.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\arduino\avr
+runtime.platform.path=C:\Users\sg0891784\Documents\arduino-1.6.4\hardware\arduino\avr
+vm.platformname.name=avr
+build.arch=AVR
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega328p</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>arduino</arduino.upload.protocol>
+        <arduino.upload.speed>115200</arduino.upload.speed>
+        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
+        <arduino.upload.port>COM5</arduino.upload.port>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="MyMQTTClient.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MyMQTTClient.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sketch1.ino">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Visual Micro\.Sketch1.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Visual Micro\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
