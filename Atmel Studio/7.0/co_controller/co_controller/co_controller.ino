@@ -18,12 +18,14 @@ Uses library from https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads 
 #define TEMP_FIRE_MIN	45
 #define TEMP_FIRE_MAX	69
 #define TEMP_WATER_MAX	50
+#define WATERHISTERESIS_HIGH	1
+#define WATERHISTERESIS_LOW		4
 
-#define	ONE_SECOND	1000
+#define	ONE_SECOND	1000UL
 #define ONE_MINUTE	(60*ONE_SECOND)
 #define PCO_DELAY	(6*ONE_MINUTE)
-#define PCO_WORK_TIME	(2*ONE_MINUTE)
-
+#define PCO_WORK_TIME	(90*ONE_SECOND)
+//#define PCO_WORK_TIME	0
 
 #define DEBUG
 
@@ -41,8 +43,7 @@ struct Thermometer {
 
 Thermometer	thermometerFire, thermometerWater;
 uint8_t WaterTempRise = TRUE;
-uint8_t WaterHisteresis_HIGH = 1;
-uint8_t WaterHisteresis_LOW = 5;
+
 
 unsigned long	currentMillis,prevMillisCo,prevMillisDelay;
 
@@ -246,17 +247,17 @@ void loop()
 	Serial.println(thermometerWater.currentTemperature);
 #endif		
 	
-	if(thermometerFire.currentTemperature >= TEMP_FIRE_MIN){ //Minimum temperature for fire-place reached!
+	if(thermometerFire.currentTemperature >= TEMP_FIRE_MIN){ //Minimum temperature for fire-place reached!		
 		if(thermometerFire.currentTemperature <= TEMP_FIRE_MAX){ //We don't want to exceed maximum temperature for fire-place
-			if((thermometerWater.currentTemperature < (TEMP_WATER_MAX + WaterHisteresis_HIGH)) && WaterTempRise){
+			if((thermometerWater.currentTemperature < (TEMP_WATER_MAX + WATERHISTERESIS_HIGH)) && WaterTempRise){
 				//coOff();
 				
 				/*  */
 				currentMillis = millis();
-				if (currentMillis - prevMillisDelay >= 6*60000UL){
-					prevMillisCo = prevMillisDelay + 6*60000UL;
+				if (currentMillis - prevMillisDelay >= PCO_DELAY){
+					prevMillisCo = prevMillisDelay + PCO_DELAY;
 					coOn();
-					if(currentMillis - prevMillisCo >= 2*60000UL){
+					if(currentMillis - prevMillisCo >= PCO_WORK_TIME){
 						coOff();
 						prevMillisDelay = millis();
 					}
@@ -272,7 +273,7 @@ void loop()
 					cwuOff();
 				}
 			}else{//thermometerWater > TEMP_WATER_MAX
-				if(thermometerWater.currentTemperature <= (TEMP_WATER_MAX - WaterHisteresis_LOW)){
+				if(thermometerWater.currentTemperature <= (TEMP_WATER_MAX - WATERHISTERESIS_LOW)){
 					WaterTempRise = TRUE;
 				}else{
 					WaterTempRise = FALSE;
@@ -291,5 +292,5 @@ void loop()
 	}	
 
 	printMainScreen(thermometerFire.currentTemperature,thermometerWater.currentTemperature);
-	delay(1000);
+	delay(5000);
 }
