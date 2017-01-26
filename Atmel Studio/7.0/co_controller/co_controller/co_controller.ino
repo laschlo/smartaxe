@@ -23,8 +23,8 @@ Uses library from https://bitbucket.org/fmalpartida/new-liquidcrystal/downloads 
 
 #define	ONE_SECOND	1000UL
 #define ONE_MINUTE	(60*ONE_SECOND)
-#define PCO_DELAY	(6*ONE_MINUTE)
-#define PCO_WORK_TIME	(90*ONE_SECOND)
+#define PCO_DELAY	(10*ONE_MINUTE)
+#define PCO_WORK_TIME	(60*ONE_SECOND)
 //#define PCO_WORK_TIME	0
 
 #define DEBUG
